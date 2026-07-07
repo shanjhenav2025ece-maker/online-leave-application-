@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Admin Panel</h2>
+
+    {% for leave in leaves %}
+        <p><b>Name:</b> {{ leave.name }}</p>
+        <p><b>Reason:</b> {{ leave.reason }}</p>
+
+        <a href="/approve/{{ leave._id }}"><button>Approve</button></a>
+        <a href="/reject/{{ leave._id }}"><button>Reject</button></a>
+
+        <hr>
+    {% endfor %}
+</div>
+
+</body>
+</html>

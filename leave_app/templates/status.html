@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Status</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Leave Status</h2>
+
+    {% for leave in leaves %}
+        <p><b>Name:</b> {{ leave.name }}</p>
+        <p><b>Reason:</b> {{ leave.reason }}</p>
+        <p><b>Status:</b> {{ leave.status }}</p>
+        <hr>
+    {% endfor %}
+
+    <a href="/apply"><button>Apply Again</button></a>
+</div>
+
+</body>
+</html>

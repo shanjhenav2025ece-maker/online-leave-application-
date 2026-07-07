@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Form</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <form action="/apply" method="POST">
+        
+        <!-- Employee ID -->
+        <input type="text" name="emp_id" placeholder="Employee ID" required>
+
+        <!-- From Date -->
+        <input type="date" name="from_date" required>
+
+        <!-- To Date -->
+        <input type="date" name="to_date" required>
+
+        <!-- Reason -->
+        <textarea name="reason" placeholder="Reason"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Apply Leave</button>
+
+    </form>
+</body>
+</html>
